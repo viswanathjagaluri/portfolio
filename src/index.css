@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* =========================================================
+   Modern Portfolio Design System – Blue & Emerald Theme
+   All colors MUST be HSL
+   ========================================================= */
+
+/* =========================================================
+   1️⃣ CSS VARIABLES ONLY (NO @apply here)
+   ========================================================= */
+@layer base {
+  :root {
+    /* Core */
+    --radius: 0.75rem;
+
+    /* Background & Text */
+    --background: 220 20% 4%;
+    --foreground: 210 40% 98%;
+
+    /* Card & Surface */
+    --card: 215 25% 8%;
+    --card-foreground: 210 40% 98%;
+    --surface: 215 30% 12%;
+
+    /* Brand */
+    --primary: 200 100% 55%;
+    --primary-foreground: 210 40% 98%;
+    --primary-glow: 200 100% 65%;
+
+    --secondary: 215 25% 15%;
+    --secondary-foreground: 210 40% 90%;
+
+    /* Accent */
+    --accent: 160 85% 45%;
+    --accent-foreground: 210 40% 98%;
+    --accent-glow: 160 85% 55%;
+
+    /* Neutral */
+    --muted: 215 20% 18%;
+    --muted-foreground: 215 20% 65%;
+    --subtle: 215 15% 25%;
+
+    /* Status */
+    --success: 160 85% 45%;
+    --warning: 45 100% 60%;
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Borders & Inputs */
+    --border: 215 20% 20%;
+    --input: 215 20% 20%;
+    --ring: 200 100% 55%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(200 100% 55%), hsl(220 100% 60%));
+    --gradient-accent: linear-gradient(135deg, hsl(160 85% 45%), hsl(180 80% 50%));
+    --gradient-surface: linear-gradient(135deg, hsl(215 25% 8%), hsl(215 30% 12%));
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(220 20% 4%) 0%,
+      hsl(215 25% 8%) 30%,
+      hsl(200 100% 55% / 0.08) 100%
+    );
+    --gradient-neon: linear-gradient(90deg, hsl(200 100% 55%), hsl(160 85% 45%));
+    --gradient-glow: linear-gradient(
+      45deg,
+      hsl(200 100% 55% / 0.3),
+      hsl(160 85% 45% / 0.3)
+    );
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px hsl(200 100% 55% / 0.15);
+    --shadow-md: 0 4px 20px hsl(200 100% 55% / 0.2);
+    --shadow-lg: 0 8px 40px hsl(200 100% 55% / 0.3);
+    --shadow-glow: 0 0 40px hsl(200 100% 55% / 0.4);
+    --shadow-accent-glow: 0 0 30px hsl(160 85% 45% / 0.5);
+    --shadow-neon: 0 0 20px hsl(200 100% 55% / 0.6),
+                   0 0 40px hsl(160 85% 45% / 0.4);
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-elastic: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+/* =========================================================
+   2️⃣ GLOBAL BASE STYLES (SAFE @apply ZONE)
+   ========================================================= */
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    scroll-behavior: smooth;
+  }
+}
+
+/* =========================================================
+   3️⃣ COMPONENTS
+   ========================================================= */
+@layer components {
+  .portfolio-card {
+    @apply bg-card border border-border rounded-lg p-6;
+    background: var(--gradient-surface);
+    transition: var(--transition-smooth);
+  }
+
+  .portfolio-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-neon);
+  }
+
+  .portfolio-button {
+    @apply px-8 py-4 rounded-xl font-bold text-lg;
+    background: var(--gradient-primary);
+    transition: var(--transition-elastic);
+  }
+
+  .portfolio-button:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: var(--shadow-neon);
+  }
+
+  .portfolio-text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* =========================================================
+   4️⃣ ANIMATIONS
+   ========================================================= */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-25px); }
+}
+
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
