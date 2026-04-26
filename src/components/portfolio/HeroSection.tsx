@@ -7,7 +7,7 @@ const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [typewriterText, setTypewriterText] = useState('');
   const [showCursor, setShowCursor] = useState(true);
-  
+
   const roles = [
     'Software Engineer',
     'AI & LLM Integration',
@@ -15,7 +15,7 @@ const HeroSection = () => {
     'Full Stack Developer',
     'RAG & GenAI Specialist'
   ];
-  
+
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
 
@@ -73,12 +73,12 @@ const HeroSection = () => {
         <div className="absolute top-1/4 right-20 w-24 h-24 bg-accent/25 rounded-full animate-float-delayed animate-glow-wave"></div>
         <div className="absolute bottom-1/4 left-1/4 w-20 h-20 bg-primary/30 rotate-12 animate-float hover-elastic" style={{ animationDelay: '3s' }}></div>
         <div className="absolute top-3/4 right-1/3 w-16 h-16 bg-accent/20 rounded-full animate-float animate-pulse-glow" style={{ animationDelay: '1.5s' }}></div>
-        
+
         {/* Enhanced Gradient Orbs with Multiple Effects */}
         <div className="absolute top-20 right-10 w-80 h-80 bg-gradient-to-br from-primary/15 to-accent/15 rounded-full animate-float blur-2xl animate-neon-pulse" style={{ animationDelay: '2s' }}></div>
         <div className="absolute bottom-20 left-10 w-96 h-96 bg-gradient-to-tl from-accent/15 to-primary/15 rounded-full animate-float-delayed blur-3xl animate-glow-wave" style={{ animationDelay: '4s' }}></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-r from-primary/10 to-accent/10 rounded-full animate-pulse-glow blur-3xl"></div>
-        
+
         {/* Animated Code-like Elements with Glow */}
         <div className="absolute top-1/3 left-20 text-primary/30 animate-bounce-in portfolio-glow-effect" style={{ animationDelay: '1.5s' }}>
           <Code className="w-10 h-10" />
@@ -89,7 +89,7 @@ const HeroSection = () => {
         <div className="absolute top-2/3 right-20 text-primary/30 animate-bounce-in portfolio-glow-effect" style={{ animationDelay: '3.5s' }}>
           <Sparkles className="w-9 h-9" />
         </div>
-        
+
         {/* New Floating Elements */}
         <div className="absolute top-16 left-1/2 w-6 h-6 bg-accent/40 rounded-full animate-float" style={{ animationDelay: '0.5s' }}></div>
         <div className="absolute bottom-32 right-16 w-8 h-8 bg-primary/40 rotate-45 animate-float-delayed"></div>
@@ -99,7 +99,7 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Left Content */}
           <div className={`text-center lg:text-left transition-all duration-1000 ${isVisible ? 'animate-fade-in' : 'opacity-0 translate-y-10'}`}>
-            
+
             {/* Animated Welcome Badge */}
             <div className={`inline-flex items-center gap-2 px-4 py-2 bg-primary/10 backdrop-blur-sm rounded-full mb-8 border border-primary/20 transition-all duration-700 ${isVisible ? 'animate-scale-in' : 'opacity-0 scale-95'}`} style={{ animationDelay: '500ms' }}>
               <Sparkles className="w-4 h-4 text-primary animate-pulse" />
@@ -132,7 +132,7 @@ const HeroSection = () => {
             {/* Interactive Stats Cards */}
             <div className={`grid grid-cols-2 md:grid-cols-4 gap-3 max-w-xl mb-8 transition-all duration-700 ${isVisible ? 'animate-scale-in' : 'opacity-0 scale-95'}`} style={{ animationDelay: '1400ms' }}>
               <div className="bg-background/50 backdrop-blur-sm rounded-lg p-3 border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:scale-105">
-                <div className="text-xl font-bold text-primary">4+</div>
+                <div className="text-xl font-bold text-primary">5+</div>
                 <div className="text-xs text-muted-foreground">Years</div>
               </div>
               <div className="bg-background/50 backdrop-blur-sm rounded-lg p-3 border border-accent/20 hover:border-accent/40 transition-all duration-300 hover:scale-105">
@@ -151,8 +151,8 @@ const HeroSection = () => {
 
             {/* Enhanced Contact Icons */}
             <div className={`flex items-center justify-center lg:justify-start gap-4 mb-8 transition-all duration-700 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: '1600ms' }}>
-              <a 
-                href="mailto:viswanathjagaluri@gmail.com" 
+              <a
+                href="mailto:viswanathjagaluri@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center gap-2 px-3 py-2 bg-background/30 backdrop-blur-sm rounded-full border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:scale-110"
@@ -160,17 +160,17 @@ const HeroSection = () => {
                 <Mail className="w-4 h-4 text-primary group-hover:animate-pulse" />
                 <span className="hidden sm:inline text-sm text-foreground group-hover:text-primary transition-colors">Email</span>
               </a>
-              <a 
-                href="https://www.linkedin.com/in/viswanathjagaluri/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://www.linkedin.com/in/codewithviswanath/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group flex items-center gap-2 px-3 py-2 bg-background/30 backdrop-blur-sm rounded-full border border-accent/20 hover:border-accent/40 transition-all duration-300 hover:scale-110"
               >
                 <Linkedin className="w-4 h-4 text-accent group-hover:animate-pulse" />
                 <span className="hidden sm:inline text-sm text-foreground group-hover:text-accent transition-colors">LinkedIn</span>
               </a>
-              <a 
-                href="tel:+19013380102" 
+              <a
+                href="tel:+19013380102"
                 className="group flex items-center gap-2 px-3 py-2 bg-background/30 backdrop-blur-sm rounded-full border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:scale-110"
               >
                 <Phone className="w-4 h-4 text-primary group-hover:animate-pulse" />
@@ -180,8 +180,8 @@ const HeroSection = () => {
 
             {/* Animated Action Buttons */}
             <div className={`flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-8 transition-all duration-700 ${isVisible ? 'animate-scale-in' : 'opacity-0 scale-95'}`} style={{ animationDelay: '1800ms' }}>
-              <Button 
-                className="portfolio-button text-white group relative overflow-hidden" 
+              <Button
+                className="portfolio-button text-white group relative overflow-hidden"
                 onClick={scrollToAbout}
               >
                 <span className="relative z-10 flex items-center gap-2">

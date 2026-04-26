@@ -1,11 +1,11 @@
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { 
-  Code, 
-  Globe, 
-  BarChart3, 
-  Database, 
-  Cloud, 
+import {
+  Code,
+  Globe,
+  BarChart3,
+  Database,
+  Cloud,
   TestTube,
   Zap
 } from 'lucide-react';
@@ -18,42 +18,66 @@ const SkillsSection = () => {
       title: "Programming Languages",
       color: "text-primary",
       bgGradient: "bg-gradient-primary",
-      skills: ["Python", "Java", "JavaScript", "TypeScript", "R", "C#", "Node.js"]
+      skills: [
+        "Python", "Java", "JavaScript", "TypeScript",
+        "SQL", "C#", "C/C++", "R", "Go", "Ruby"
+      ]
     },
     {
       icon: Globe,
       title: "Web & Front-End",
       color: "text-accent",
       bgGradient: "bg-gradient-accent",
-      skills: ["React", "Angular", "Ionic", "Tailwind CSS", "Redux", "NGRX", "RXJS"]
+      skills: [
+        "React.js", "Angular", "Next.js", "Redux", "NgRx",
+        "HTML5", "CSS3", "Tailwind CSS", "Responsive Design"
+      ]
     },
     {
       icon: BarChart3,
-      title: "AI, Data Science & LLM",
+      title: "AI / ML / LLM",
       color: "text-primary",
       bgGradient: "bg-gradient-primary",
-      skills: ["LangChain", "Hugging Face", "PyTorch", "NumPy", "Pandas", "Power BI", "Prompt Engineering"]
+      skills: [
+        "LangChain", "TensorFlow", "PyTorch",
+        "Hugging Face Transformers", "RAG",
+        "Prompt Engineering", "NLP",
+        "Scikit-learn", "Keras", "FAISS",
+        "Pinecone", "Weaviate"
+      ]
     },
     {
       icon: Database,
-      title: "Databases",
+      title: "Data Engineering & Databases",
       color: "text-accent",
       bgGradient: "bg-gradient-accent",
-      skills: ["MySQL", "PostgreSQL", "MongoDB", "DynamoDB", "Redis", "FAISS"]
+      skills: [
+        "PostgreSQL", "MySQL", "MongoDB", "DynamoDB",
+        "Redis", "Spark", "Kafka", "Delta Lake",
+        "BigQuery", "Elasticsearch"
+      ]
     },
     {
       icon: Cloud,
-      title: "Cloud & DevOps",
+      title: "Cloud, DevOps & MLOps",
       color: "text-primary",
       bgGradient: "bg-gradient-primary",
-      skills: ["AWS", "Azure", "Docker", "Kubernetes", "CI/CD", "GitHub Actions", "Jenkins"]
+      skills: [
+        "AWS", "Azure", "GCP", "Docker", "Kubernetes",
+        "Terraform", "CloudFormation", "Helm",
+        "CI/CD", "GitHub Actions", "Jenkins", "GitLab CI/CD"
+      ]
     },
     {
       icon: TestTube,
-      title: "Testing & Tools",
+      title: "Testing, Security & Observability",
       color: "text-accent",
       bgGradient: "bg-gradient-accent",
-      skills: ["Pytest", "Jest", "Jasmine", "Postman", "Jira", "Agile/Scrum"]
+      skills: [
+        "JUnit", "Mockito", "Pytest", "Jest", "Selenium",
+        "Postman", "Prometheus", "Grafana", "CloudWatch",
+        "OAuth2", "SAML", "IAM"
+      ]
     }
   ];
 
@@ -92,8 +116,8 @@ const SkillsSection = () => {
                     {category.skills.map((skill, skillIndex) => (
                       <div key={skillIndex} className="flex items-center">
                         <Zap className={`w-3 h-3 mr-3 ${category.color}`} />
-                        <Badge 
-                          variant="secondary" 
+                        <Badge
+                          variant="secondary"
                           className="text-sm bg-muted/50 text-foreground hover:bg-muted transition-colors"
                         >
                           {skill}

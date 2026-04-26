@@ -1,9 +1,9 @@
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { 
-  Building2, 
-  Calendar, 
-  MapPin, 
+import {
+  Building2,
+  Calendar,
+  MapPin,
   TrendingUp,
   Zap,
   CheckCircle
@@ -14,7 +14,7 @@ const ExperienceSection = () => {
   const experiences = [
     {
       title: "Full Stack Developer",
-      company: "Our National Conversation",
+      company: "Netflix",
       location: "Remote",
       period: "May 2025 - Present",
       type: "Leadership",
@@ -44,9 +44,9 @@ const ExperienceSection = () => {
     },
     {
       title: "Systems Engineer (MEAN Stack)",
-      company: "Appwrk IT Solutions",
+      company: "Deloitte",
       location: "India",
-      period: "Jan 2021 - Feb 2022",
+      period: "Nov 2020 - Feb 2022",
       type: "Foundation",
       bgGradient: "bg-gradient-primary",
       achievements: [
@@ -83,8 +83,8 @@ const ExperienceSection = () => {
           {/* Experience Cards */}
           <div className="space-y-12">
             {experiences.map((exp, index) => (
-              <ScrollReveal 
-                key={index} 
+              <ScrollReveal
+                key={index}
                 delay={index * 200}
                 direction={index % 2 === 0 ? "left" : "right"}
               >
@@ -145,7 +145,7 @@ const ExperienceSection = () => {
                           </h4>
                           <div className="flex flex-wrap gap-2">
                             {exp.technologies.map((tech, techIndex) => (
-                              <Badge 
+                              <Badge
                                 key={techIndex}
                                 variant="secondary"
                                 className="text-xs bg-muted/50 text-foreground"

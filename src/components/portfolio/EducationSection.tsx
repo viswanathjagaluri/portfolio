@@ -1,10 +1,10 @@
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { 
-  GraduationCap, 
-  Award, 
-  Calendar, 
-  MapPin, 
+import {
+  GraduationCap,
+  Award,
+  Calendar,
+  MapPin,
   Star,
   Trophy,
   Book
@@ -35,6 +35,13 @@ const EducationSection = () => {
 
   const certifications = [
     {
+      title: "AWS ML Certification",
+      issuer: "AWS",
+      year: "2026",
+      type: "Technical",
+      icon: Star
+    },
+    {
       title: "React Professional Certification",
       issuer: "Infosys",
       year: "2023",
@@ -63,19 +70,13 @@ const EducationSection = () => {
       icon: Trophy
     },
     {
-      title: "Insta Award",
+      title: "Insta & Rise Award",
       issuer: "Infosys",
       year: "2023",
       type: "Achievement",
       icon: Award
-    },
-    {
-      title: "Rise Award",
-      issuer: "Infosys",
-      year: "2022",
-      type: "Achievement",
-      icon: Star
     }
+    
   ];
 
   return (
@@ -102,7 +103,7 @@ const EducationSection = () => {
                 <GraduationCap className="w-6 h-6 mr-3" />
                 Education
               </h3>
-              
+
               <div className="space-y-6">
                 {education.map((edu, index) => (
                   <ScrollReveal key={index} delay={index * 200}>
@@ -116,7 +117,7 @@ const EducationSection = () => {
                             {edu.type}
                           </Badge>
                         </div>
-                        
+
                         <h4 className="text-xl font-bold text-foreground mb-2">{edu.degree}</h4>
                         <div className="space-y-2 text-muted-foreground">
                           <div className="flex items-center">
@@ -149,7 +150,7 @@ const EducationSection = () => {
                 <Award className="w-6 h-6 mr-3" />
                 Certifications & Awards
               </h3>
-              
+
               <div className="grid gap-4">
                 {certifications.map((cert, index) => (
                   <ScrollReveal key={index} delay={300 + (index * 100)}>
@@ -157,11 +158,10 @@ const EducationSection = () => {
                       <div className="p-4">
                         <div className="flex items-center justify-between">
                           <div className="flex items-center">
-                            <div className={`inline-flex items-center justify-center w-8 h-8 rounded-lg ${
-                              cert.type === 'Technical' ? 'bg-gradient-primary' :
+                            <div className={`inline-flex items-center justify-center w-8 h-8 rounded-lg ${cert.type === 'Technical' ? 'bg-gradient-primary' :
                               cert.type === 'Cloud' ? 'bg-gradient-accent' :
-                              'bg-gradient-primary'
-                            } mr-3`}>
+                                'bg-gradient-primary'
+                              } mr-3`}>
                               <cert.icon className="w-4 h-4 text-white" />
                             </div>
                             <div>
@@ -208,13 +208,13 @@ const EducationSection = () => {
                   <p className="text-muted-foreground">Years of Learning</p>
                 </div>
               </div>
-              
+
               {/* Learning Philosophy */}
               <div className="mt-8 text-center">
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                  Committed to continuous learning and staying at the forefront of technology through 
-                  <span className="text-primary font-semibold"> formal education</span>, 
-                  <span className="text-accent font-semibold"> professional certifications</span>, and 
+                  Committed to continuous learning and staying at the forefront of technology through
+                  <span className="text-primary font-semibold"> formal education</span>,
+                  <span className="text-accent font-semibold"> professional certifications</span>, and
                   <span className="text-primary font-semibold"> hands-on experience</span>.
                 </p>
               </div>

@@ -49,8 +49,8 @@ const AboutSection = () => {
           <ScrollReveal direction="right" delay={200} className="lg:order-2 flex justify-center">
             <div className="relative">
               <div className="w-64 h-64 md:w-72 md:h-72 rounded-2xl overflow-hidden border-4 border-primary/20 portfolio-surface hover-lift">
-                <img 
-                 src={`${import.meta.env.BASE_URL}lovable-uploads/viswanath.jpeg`}
+                <img
+                  src={`${import.meta.env.BASE_URL}lovable-uploads/viswanath.jpeg`}
                   alt="Viswanath Jagaluri - Professional Portrait"
                   className="w-full h-full object-cover object-center"
                 />
@@ -67,17 +67,17 @@ const AboutSection = () => {
               <h3 className="text-2xl font-semibold mb-4 text-primary">My Journey</h3>
               <div className="space-y-4 text-lg leading-relaxed text-muted-foreground">
                 <p>
-                  Full Stack Developer with <span className="text-accent font-semibold">4 years of experience</span> designing, 
-                  developing, and deploying scalable web applications on <span className="text-primary font-semibold">AWS and Azure</span>. 
+                  Full Stack Developer with <span className="text-accent font-semibold">5 years of experience</span> designing,
+                  developing, and deploying scalable web applications on <span className="text-primary font-semibold">AWS and Azure</span>.
                   Expertise in front-end architecture using React and Angular, and back-end development with Python and Java.
                 </p>
                 <p>
-                  Proven ability to see projects through from conception to completion, creating servers, 
+                  Proven ability to see projects through from conception to completion, creating servers,
                   managing <span className="text-accent font-semibold">SQL (PostgreSQL, MySQL)</span> and{' '}
                   <span className="text-primary font-semibold">NoSQL (MongoDB)</span> databases, and building robust RESTful APIs.
                 </p>
                 <p>
-                  Leverages <span className="text-accent font-semibold">AI and LLM integration (LangChain, Hugging Face)</span> to 
+                  Leverages <span className="text-accent font-semibold">AI and LLM integration (LangChain, Hugging Face)</span> to
                   deliver innovative, high-impact software solutions including{' '}
                   <span className="text-primary font-semibold">RAG systems with 85% factual accuracy</span>.
                 </p>
@@ -112,10 +112,10 @@ const AboutSection = () => {
               <h3 className="text-2xl font-semibold mb-6 text-primary">Core Values</h3>
               <div className="flex flex-wrap justify-center gap-3">
                 {[
-                  "Innovation-Driven", "Team Leadership", "Scalable Solutions", 
+                  "Innovation-Driven", "Team Leadership", "Scalable Solutions",
                   "AI Integration", "Performance Optimization", "User-Centric Design"
                 ].map((value, index) => (
-                  <Badge 
+                  <Badge
                     key={index}
                     className="px-4 py-2 bg-gradient-primary text-white border-0 hover:shadow-portfolio-glow transition-all duration-300"
                   >
